@@ -1,6 +1,12 @@
 
-for i in "Hello word":
-	print(i)
+
+
+def he(a)
+	for i in a:
+		print(i)
+
+in=input("输入一个字符串")
+he(in)
 
 '''
 i=0
