@@ -44,7 +44,7 @@ print(a,"和",b,"的最大公约数是",hcf)
 i=a*b/hcf
 print(a,"和",b,"的最小公倍数是",i)
 '''
-
+'''
 #3.统计不同字符个数。用户从键盘输入一行字符，统计并输出其中英文、数字、空格、其它字符的个数
 sz=zm=kg=qt=0
 for i in input("请输入字符串"):
@@ -57,4 +57,24 @@ for i in input("请输入字符串"):
 	else:
 		qt+=1
 print("数字有",sz,"个，字母有",zm,"个，空格有",kg,"个，其它有",qt,"个")
+'''
 
+#4.猜数游戏续，如果用户输入的不是整数，程序终止退出。改为当用户输入出错时，提示”输入内容必须为整数，并让用户重新输入。
+import random
+target=random.randint(1,1000)
+count=0
+while True:
+	try:
+		guess=int(input('请输入一个猜测的整数（1至1000）:'))
+	except:
+		print("输入内容必须为整数")
+		continue
+	count=count+1
+	if guess > target:
+		print("猜大了")
+	elif guess < target:
+		print("猜小了")
+	else:
+		print('猜对了')
+		break
+print ("次轮的猜测次数是：",count)
