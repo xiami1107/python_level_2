@@ -57,6 +57,7 @@ def countstr():
 countstr()
 
 '''
+'''
 #4.编写一个函数，打印200以内的所属素数，以空格分割。
 def isPrime200():
 
@@ -73,4 +74,17 @@ def isPrime200():
 			continue
 
 isPrime200()
+'''
 
+#5.编写一个函数，参数为一个整数n，利用递归获取斐波拉契数列中的第n个数并返回
+
+def Fibonacci():
+	n=int(input("输入一个整数"))
+	a,b=0,1
+	for i in range(n):
+		a,b=a+b,a
+		#print(a,end=" ")
+	return a,n
+re=Fibonacci()
+print(re[1],"返回数是：",re[0])
+#print("返回数是：",Fibonacci())
